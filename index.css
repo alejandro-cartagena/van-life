@@ -30,6 +30,8 @@ body {
     flex-direction: column;
 }
 
+
+
 header {
     height: 110px;
     display: flex;
@@ -127,6 +129,8 @@ footer {
     color: white;
     padding: 45px 23px;
 }
+
+
 
 .home-container h1 {
     font-weight: 700;
@@ -739,4 +743,48 @@ img.graph {
 .host-reviews .review-star {
     color: #ff8c38;
     margin-right: 5px;
+}
+
+
+/*               */
+/* Media Queries */
+/*               */
+
+@media (min-width: 600px) {
+    .home-container,
+    header,
+    .about-page-container,
+    .van-list-container {
+        padding-left: 4em;
+        padding-right: 4em; 
+    }
+
+    .site-logo {
+        padding-left: 0;;
+    }
+    
+}
+
+@media (min-width: 900px) {
+    .home-container,
+    header,
+    .about-page-container,
+    .van-list-container {
+        padding-left: 6em;
+        padding-right: 6em; 
+    }
+
+    
+}
+
+@media (min-width: 1200px) {
+    .home-container,
+    header,
+    .about-page-container,
+    .van-list-container {
+        padding-left: 10em;
+        padding-right: 10em; 
+    }
+
+    
 }
