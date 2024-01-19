@@ -964,6 +964,12 @@ img.graph {
     
 }
 
+@media (max-width: 415px) {
+    .van-list-container button {
+        margin-bottom: 1em;
+    }
+}
+
 .about-page-container,
 .van-list-container,
 .host-layout-container,
