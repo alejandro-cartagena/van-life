@@ -1,7 +1,5 @@
 # <p align="center">Van Life Application</p>
 
-## App Link: https://van-life-application.netlify.app/
-
 ## About Van Life
 
 Van Life is a website for travelers who want to take their trip to the road! The idea is that 
@@ -50,3 +48,5 @@ Password:
 ```
 p123
 ````
+
+## App Link: https://van-life-application.netlify.app/
