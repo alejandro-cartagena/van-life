@@ -36,6 +36,7 @@ header {
     height: 110px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-block: 10px;
     position: sticky;
     top: 0;
@@ -95,6 +96,64 @@ nav {
     display: flex;
 }
 
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+.burger-menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 0.2rem;
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+@media (max-width: 650px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .logo-menu-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: start;
+        height: fit-content;
+        padding: 2.25em 0;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        margin-top: 2em;
+    }
+
+    .nav-link {
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger-menu {
+        margin-right: 23px;;
+    }
+}
+
 main {
     /* margin-bottom: 84px; */
 }
@@ -129,6 +188,7 @@ footer {
     color: black;
     text-decoration: none;
     margin-left: 26px;
+    margin-top: 2em;
 }
 
 .back-button span:hover {
@@ -361,6 +421,7 @@ i[class*="van-type-"] {
     max-height: 700px;
     border-radius: 5px;
     margin-block: 47px;
+    margin-top: 2em;
 }
 
 @media (min-width: 830px) {
@@ -399,6 +460,7 @@ i[class*="van-type-"] {
 .host-nav {
     display: flex;
     margin-bottom: 30px;
+    margin-top: 2em;
 }
 
 .host-nav a {
@@ -820,6 +882,10 @@ img.graph {
     .home-container h1 {
         margin-top: 2em;
     }
+
+    .about-hero-image {
+        border-radius: 5px;
+    }
     
 }
 
@@ -845,6 +911,8 @@ img.graph {
     .home-container a {
         width: 50%;
     }
+
+    
 
     
 }
@@ -877,7 +945,6 @@ img.graph {
         width: 50%;
         object-fit: cover;
         margin-right: 2em;
-        border-radius: 5px;
     }
 
     .about-page-cta {
@@ -898,8 +965,8 @@ img.graph {
 }
 
 .about-page-container,
-    .van-list-container,
-    .host-layout-container,
-    .van-detail-container {
+.van-list-container,
+.host-layout-container,
+.van-detail-container {
         margin-bottom: 84px;
     }

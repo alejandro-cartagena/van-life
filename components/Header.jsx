@@ -9,6 +9,12 @@ export default function Header( {isLoggedIn, setIsLoggedIn} ) {
         color: "#161616"
     }
 
+    const [menuOpen, setMenuOpen] = React.useState(false)
+
+    function toggleMenu() {
+        setMenuOpen(prevVal => !prevVal)
+    }
+
 
     function fakeLogOut() {
         localStorage.removeItem("loggedin")
@@ -18,21 +24,31 @@ export default function Header( {isLoggedIn, setIsLoggedIn} ) {
 
     return (
         <header>
-            <Link className="site-logo" to="/">#VanLife</Link>
-            <nav className="nav-links">
+            <div className="logo-menu-container">
+                <Link className="site-logo" to="/">#VanLife</Link>
+                <div className="burger-menu" onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav className={menuOpen ? "nav-links open" : "nav-links"}>
                 <NavLink
+                    className={"nav-link"}
                     to="/host"
                     style={({ isActive }) => isActive ? activeStyles : null}
                 >
                     Host
                 </NavLink>
                 <NavLink
+                    className={"nav-link"}
                     to="/about"
                     style={({ isActive }) => isActive ? activeStyles : null}
                 >
                     About
                 </NavLink>
                 <NavLink
+                    className={"nav-link"}
                     to="/vans"
                     style={({ isActive }) => isActive ? activeStyles : null}
                 >
