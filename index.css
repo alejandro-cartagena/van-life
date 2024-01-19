@@ -970,6 +970,12 @@ img.graph {
     }
 }
 
+@media (max-width: 370px) {
+    .host-nav a {
+        font-size: 0.80rem;
+    }
+}
+
 .about-page-container,
 .van-list-container,
 .host-layout-container,
