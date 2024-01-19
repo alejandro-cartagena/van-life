@@ -7,11 +7,18 @@ $ npm install
 $ npm start
 ````
 
-How to Log In:
+# How To Log In!
+
+Username:
 
 ```
-userName: b@b.com
-password: p123
+b@b.com
+````
+
+Password:
+
+```
+p123
 ````
 
 ## About Van Life
