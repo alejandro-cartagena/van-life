@@ -9,6 +9,8 @@ $ npm start
 
 # How To Log In!
 
+Click on the Avatar Icon to navigate to the /login route
+
 Username:
 
 ```
