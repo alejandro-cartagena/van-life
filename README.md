@@ -1,6 +1,4 @@
-# co9c94314a45694f6736957f6
-
-Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename `.js` files to `.jsx` :)
+# Van Life
 
 Quick start:
 
@@ -9,8 +7,23 @@ $ npm install
 $ npm start
 ````
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+# How To Log In!
+
+Click on the Avatar Icon to navigate to the /login route
+
+Username:
+
+```
+b@b.com
+````
+
+Password:
+
+```
+p123
+````
+
+## About Van Life
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
 If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
