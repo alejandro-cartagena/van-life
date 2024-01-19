@@ -61,7 +61,12 @@ export default function Vans() {
     }
 
     if (loading) {
-        return <h1>Loading...</h1>
+        return (
+            <div className="van-list-container">
+                <h1 className="vans-page-loading-text">Loading...</h1>
+            </div>
+        )
+        
     }
     
     if (error) {

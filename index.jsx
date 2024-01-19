@@ -22,26 +22,21 @@ import AuthRequired from "./components/AuthRequired"
 import "./server"
 
 function App() {
-  /**
-   * Challenge: Create the AuthRequired Layout Route to protect
-   * all the /host routes.
-   * 
-   * For now, just use `const authenticated = false`
-   * to determine the authenticated status of the user, and
-   * either send them to the /login route, or render the Outlet
-   */
+
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
           <Route
             path="login"
-            element={<Login />}
+            element={<Login setIsLoggedIn={setIsLoggedIn}/>}
           />
 
           <Route element={<AuthRequired />}>

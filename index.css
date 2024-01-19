@@ -37,6 +37,10 @@ header {
     display: flex;
     align-items: center;
     padding-block: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #fff7ed;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 header .site-logo {
@@ -69,12 +73,30 @@ header .login-link {
     align-items: center;
 }
 
+.header-logout-btn {
+    background-color: #ff8c38;
+    color: #4d4d4d;
+    border: none;
+    border-radius: 5px;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+
+}
+
+.header-logout-btn:hover,
+.header-logout-btn:focus {
+    background-color: #E66405;
+    font-weight: 700;
+}
+
 nav {
     display: flex;
 }
 
 main {
-    margin-bottom: 84px;
+    /* margin-bottom: 84px; */
 }
 
 footer {
@@ -128,8 +150,8 @@ footer {
     min-height: 350px;
     color: white;
     padding: 45px 23px;
+    height: 81vh;
 }
-
 
 
 .home-container h1 {
@@ -140,6 +162,11 @@ footer {
 
 .home-container p {
     line-height: 24px;
+}
+
+.home-container h1,
+.home-container p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .home-container a {
@@ -316,10 +343,8 @@ i[class*="van-type-"] {
     color: #161616;
 }
 
-.van-detail img {
-    border-radius: 5px;
-    margin-block: 47px;
-}
+
+
 
 .van-detail h2 {
     font-size: 2rem;
@@ -328,6 +353,31 @@ i[class*="van-type-"] {
 
 .van-detail > i {
     align-self: flex-start;
+}
+
+.van-detail-img {
+    width: 100%;
+    max-width: 700px;
+    max-height: 700px;
+    border-radius: 5px;
+    margin-block: 47px;
+}
+
+@media (min-width: 830px) {
+    .van-detail {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .van-detail-text-container {
+        width: 50%;
+    }
+
+    .van-detail-img {
+        width: 90%;
+        margin-right: 2em;
+    }
 }
 
 .van-detail .van-price {
@@ -498,7 +548,9 @@ i[class*="van-type-"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-inline: 27px;
+    height: 50vh;
 }
 
 .login-form {
@@ -754,13 +806,19 @@ img.graph {
     .home-container,
     header,
     .about-page-container,
-    .van-list-container {
+    .van-list-container,
+    .host-layout-container,
+    .van-detail-container {
         padding-left: 4em;
         padding-right: 4em; 
     }
 
     .site-logo {
         padding-left: 0;;
+    }
+
+    .home-container h1 {
+        margin-top: 2em;
     }
     
 }
@@ -769,9 +827,23 @@ img.graph {
     .home-container,
     header,
     .about-page-container,
-    .van-list-container {
+    .van-list-container,
+    .host-layout-container,
+    .van-detail-container {
         padding-left: 6em;
         padding-right: 6em; 
+    }
+
+    .host-van-detail-info > h4 {
+        font-size: 1rem;
+    }
+
+    .home-container h1 {
+        margin-top: 4em;
+    }
+
+    .home-container a {
+        width: 50%;
     }
 
     
@@ -781,10 +853,53 @@ img.graph {
     .home-container,
     header,
     .about-page-container,
-    .van-list-container {
+    .van-list-container,
+    .host-layout-container,
+    .van-detail-container {
         padding-left: 10em;
         padding-right: 10em; 
     }
 
+    .home-container h1 {
+        margin-top: 6em;
+    }
+
+    .about-page-container {
+        margin-top: 2em;
+    }
+
+    .about-page-img-content-container{
+        display: flex;
+        margin-bottom: 5em;
+    }
+
+    .about-hero-image {
+        width: 50%;
+        object-fit: cover;
+        margin-right: 2em;
+        border-radius: 5px;
+    }
+
+    .about-page-cta {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-h2-break {
+        border: solid black;
+    }
+
+    .van-tile img {
+        max-width: 85%;
+    }
+
     
 }
+
+.about-page-container,
+    .van-list-container,
+    .host-layout-container,
+    .van-detail-container {
+        margin-bottom: 84px;
+    }

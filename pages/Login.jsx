@@ -2,13 +2,14 @@ import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { loginUser } from "../api"
 
-export default function Login() {
+export default function Login( { setIsLoggedIn } ) {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const [status, setStatus] = React.useState("idle")
     const [error, setError] = React.useState(null)
 
     const location = useLocation()
     const navigate = useNavigate()
+
 
     const from = location.state?.from || "/host";
 
@@ -17,8 +18,10 @@ export default function Login() {
         setStatus("submitting")
         loginUser(loginFormData)
             .then(data => {
+                console.log("DATA: ", data)
                 setError(null)
                 localStorage.setItem("loggedin", true)
+                setIsLoggedIn(true)
                 navigate(from, { replace: true })
             })
             .catch(err => {
@@ -36,6 +39,7 @@ export default function Login() {
             [name]: value
         }))
     }
+
 
     return (
         <div className="login-container">

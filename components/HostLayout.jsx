@@ -9,7 +9,7 @@ export default function HostLayout() {
     }
 
     return (
-        <>
+        <div className="host-layout-container">
             <nav className="host-nav">
                 <NavLink
                     to="."
@@ -42,6 +42,6 @@ export default function HostLayout() {
 
             </nav>
             <Outlet />
-        </>
+        </div>
     )
 }
