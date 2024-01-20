@@ -23,7 +23,7 @@ import "./server"
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(localStorage.getItem("loggedin"));
 
 
   return (
