@@ -264,6 +264,10 @@ footer {
     grid-template-columns: 1fr; */
 }
 
+.home-section h2 {
+    font-size: 2rem;
+}
+
 .home-section-title {
     text-align: center;
 }
@@ -287,10 +291,13 @@ footer {
     border: 1px solid #D9D9D9;
     border-radius: 6px;
     text-align: center;
-    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
     max-width: 475px;
+}
+
+.van-card:not(:last-child) {
+    margin-bottom: 2em;
 }
 
 .van-card-img {
@@ -308,6 +315,118 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+.home-section-host-feature {
+    display: flex;
+    align-items: flex-start;
+}
+
+.home-section-host-feature:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+/* .home-section-host-feature p {
+    margin: 0;
+} */
+
+.home-section-host-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.home-section-host-features {
+    max-width: 700px;
+    margin-right: 2em;
+}
+
+.host-feature-icon {
+    margin-right: 0.5em;
+    font-size: 3rem;
+    border-radius: 4px;
+    padding: 2;
+    min-width: 48px;
+}
+
+.host-feature-heading {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.host-feature-text {
+    margin-top: 0;
+    font-size: 0.85rem;
+    color: #444343;
+}
+
+.money-icon {
+    background-color: green;
+    color: #FFFFFF;
+}
+
+.van-icon {
+    background-color: lightblue;
+}
+
+.star-icon {
+    background-color: black;
+    color: gold;
+}
+
+.host-feature-img-container {
+    display: grid;
+    /* border: solid red; */
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 700px;
+}
+
+.host-feature-img {
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.host-income-img, .host-van-img {
+    grid-row: 1 / 2;
+}
+
+.host-income-img {
+    grid-column: 1 / 4;
+}
+
+.host-van-img {
+    grid-column: 2 / 5;
+    align-self: center;
+}
+
+.host-review-img {
+    grid-row: 1 / 2;
+    grid-column: 3 / 6;
+    align-self: center;
+    max-height: 220px;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 1000px) {
+    .home-section-host-container {
+        flex-direction: column;
+    }
+
+    .host-feature-img-container {
+        order: -1;
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }
+
+    .home-section-host-features {
+        margin-right: 0;
+    }
+}
+
 
 /*** ABOUT PAGE ***/
 .about-hero-image {
@@ -970,12 +1089,16 @@ img.graph {
 @media (min-width: 900px) {
 
     .home-text-container {
-        margin-top: 10em;
+        margin-top: 12em;
     }
 
     .van-cards-container {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0 2em;
+    }
+
+    .van-card:not(:last-child) {
+        margin-bottom: 0;
     }
     
 
