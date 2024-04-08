@@ -35,6 +35,18 @@ export default function Home() {
                     {featuredVans}
                 </div>
             </div>
+
+            <div className="home-section">
+                <h2>Host Your Own Van</h2>
+                <div className="home-section-host-container">
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
         </>
      
     )
