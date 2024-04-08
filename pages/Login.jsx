@@ -47,7 +47,7 @@ export default function Login( { setIsLoggedIn } ) {
                 location.state?.message &&
                     <h3 className="login-error">{location.state.message}</h3>
             }
-            <h1>Sign in to your account</h1>
+            <h1 className="sign-in-text">Sign in to your account</h1>
             <div className="username-password">
                 <p>(Username: b@b.com) <br /> (Password: p123)</p>
             </div>

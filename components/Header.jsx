@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
 import imageUrl from "/assets/images/avatar-icon.png"
+import { IoClose } from "react-icons/io5";
 
 export default function Header( {isLoggedIn, setIsLoggedIn} ) {
     const activeStyles = {
@@ -15,6 +16,10 @@ export default function Header( {isLoggedIn, setIsLoggedIn} ) {
         setMenuOpen(prevVal => !prevVal)
     }
 
+    function closeMenu() {
+        setMenuOpen(false)
+    }
+
 
     function fakeLogOut() {
         localStorage.removeItem("loggedin")
@@ -25,18 +30,24 @@ export default function Header( {isLoggedIn, setIsLoggedIn} ) {
     return (
         <header>
             <div className="logo-menu-container">
-                <Link className="site-logo" to="/">#VanLife</Link>
-                <div className="burger-menu" onClick={toggleMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <Link onClick={closeMenu} className="site-logo" to="/">#VanLife</Link>
+                {!menuOpen ? (
+                    <div className="burger-menu" onClick={toggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                ): (
+                    <IoClose onClick={closeMenu} className="header-close-btn" />
+                )}
+                
             </div>
             <nav className={menuOpen ? "nav-links open" : "nav-links"}>
                 <NavLink
                     className={"nav-link"}
                     to="/host"
                     style={({ isActive }) => isActive ? activeStyles : null}
+                    onClick={closeMenu}
                 >
                     Host
                 </NavLink>
@@ -44,6 +55,7 @@ export default function Header( {isLoggedIn, setIsLoggedIn} ) {
                     className={"nav-link"}
                     to="/about"
                     style={({ isActive }) => isActive ? activeStyles : null}
+                    onClick={closeMenu}
                 >
                     About
                 </NavLink>
@@ -51,11 +63,13 @@ export default function Header( {isLoggedIn, setIsLoggedIn} ) {
                     className={"nav-link"}
                     to="/vans"
                     style={({ isActive }) => isActive ? activeStyles : null}
+                    onClick={closeMenu}
                 >
                     Vans
                 </NavLink>
                 {!isLoggedIn ? (
                     <Link 
+                        onClick={closeMenu}
                         to="login" 
                         className="login-link"
                     >
