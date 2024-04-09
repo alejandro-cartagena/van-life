@@ -24,6 +24,22 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function Home() {
+    // const [imagesLoaded, setImagesLoaded] = React.useState(false);
+
+    // React.useEffect(() => {
+    //     const preloadImages = () => {
+    //         const images = [HostIncomeSc, HostVansSc, HostReviewsSc, ReviewImg1, ReviewImg2, ReviewImg3, ReviewImg4, ReviewImg5];
+    //         images.forEach((image) => {
+    //             const img = new Image();
+    //             img.src = image;
+    //             img.onload = () => {
+    //                 setImagesLoaded(true);
+    //             };
+    //         });
+    //     };
+
+    //     preloadImages();
+    // }, []);
 
     const featuredVansData = [
         {imgURL: "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png", vanName: "Modest Explorer", vanDescription: "The Modest Explorer is a van designed to get you out of the house and into nature."},
@@ -65,7 +81,7 @@ export default function Home() {
         },
         {
             reviewText: `Five stars all around! I recently used this platform to rent a van for a camping trip with my family, and it was
-             a breeze from start to finish. The website is user-friendly, making it incredibaly easy.`,
+             a breeze from start to finish. The website is user-friendly, making it super easy.`,
             reviewAuthorImg: ReviewImg4,
             reviewAuthorName: 'Alex',
             reviewAuthorCity: 'Los Angeles, CA'
@@ -88,7 +104,8 @@ export default function Home() {
                     reviewText={review.reviewText}
                     reviewAuthorImg={review.reviewAuthorImg}
                     reviewAuthorName={review.reviewAuthorName}
-                    reviewAuthorCity={review.reviewAuthorCity}/>
+                    reviewAuthorCity={review.reviewAuthorCity}
+                />
     })
 
     const responsive = {
@@ -154,7 +171,7 @@ export default function Home() {
                             <div>
                                 <p className="host-feature-heading"><b>Reviews</b></p>
                                 <p className="host-feature-text">Gain valuable insights into your van rental experience by accessing and exploring your
-                                 reviews from satisfied customers</p>
+                                 reviews from satisfied customers.</p>
                             </div>
                         </div>
 
@@ -175,6 +192,10 @@ export default function Home() {
                 <Carousel 
                     className="carousel" 
                     responsive={responsive}
+                    swipeable={true}
+                    draggable={true}
+                    partialVisible={false}
+                    ssr={true}
                     >
                     {reviewCards}
                 </Carousel>
