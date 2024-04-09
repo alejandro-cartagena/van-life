@@ -215,7 +215,7 @@ footer {
 /*** HOME PAGE ***/
 .home-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
-        url("./assets/images/home-page-bg-img-min-min.jpg") no-repeat center center;
+        url("./assets/images/home-page-bg-img-min-min-min.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -478,9 +478,9 @@ footer {
 .review-img {
     width: 55px;
     height: 55px;
-    object-fit: cover;
     border-radius: 4px;
     margin-right: 1em;
+    object-fit: cover;
 }
 
 .review-comment {
@@ -528,10 +528,6 @@ footer {
 
 
 /*** ABOUT PAGE ***/
-.about-page-container {
-    margin-top: 4em;
-}
-
 .about-hero-image {
     max-width: 100%;
 }
@@ -1175,6 +1171,10 @@ img.graph {
 /*               */
 
 @media (min-width: 600px) {
+
+    .about-page-container {
+        margin-top: 4em;
+    }
 
     .van-list {
         grid-template-columns: 1fr 1fr;
