@@ -19,27 +19,7 @@ import ReviewImg4 from '../assets/images/review-pic-4.jpg'
 import ReviewImg5 from '../assets/images/review-pic-5.jpg'
 
 
-// React Carousel Package
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
 export default function Home() {
-    // const [imagesLoaded, setImagesLoaded] = React.useState(false);
-
-    // React.useEffect(() => {
-    //     const preloadImages = () => {
-    //         const images = [HostIncomeSc, HostVansSc, HostReviewsSc, ReviewImg1, ReviewImg2, ReviewImg3, ReviewImg4, ReviewImg5];
-    //         images.forEach((image) => {
-    //             const img = new Image();
-    //             img.src = image;
-    //             img.onload = () => {
-    //                 setImagesLoaded(true);
-    //             };
-    //         });
-    //     };
-
-    //     preloadImages();
-    // }, []);
 
     const featuredVansData = [
         {imgURL: "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png", vanName: "Modest Explorer", vanDescription: "The Modest Explorer is a van designed to get you out of the house and into nature."},
@@ -56,11 +36,11 @@ export default function Home() {
 
     const reviewData = [
         {
-            reviewText: `I rented a van from this platform for a weekend getaway, and I couldn't be happier with my experience! 
-            The van was clean, comfortable, and equipped with everything I needed for my trip.`,
-            reviewAuthorImg: ReviewImg1,
-            reviewAuthorName: 'Samantha',
-            reviewAuthorCity: 'Chicago, IL'
+            reviewText: `I've rented vans from various platforms in the past, but none have compared to the quality and service provided
+             by this platform. The vans are well-maintained, and the hosts are incredibly friendly.`,
+            reviewAuthorImg: ReviewImg3,
+            reviewAuthorName: 'Sierra',
+            reviewAuthorCity: 'Miami, FL'
         
         },
         {
@@ -72,22 +52,6 @@ export default function Home() {
         
         },
         {
-            reviewText: `I've rented vans from various platforms in the past, but none have compared to the quality and service provided
-             by this platform. The vans are well-maintained, and the hosts are incredibly friendly.`,
-            reviewAuthorImg: ReviewImg3,
-            reviewAuthorName: 'Sierra',
-            reviewAuthorCity: 'Miami, FL'
-        
-        },
-        {
-            reviewText: `Five stars all around! I recently used this platform to rent a van for a camping trip with my family, and it was
-             a breeze from start to finish. The website is user-friendly, making it super easy.`,
-            reviewAuthorImg: ReviewImg4,
-            reviewAuthorName: 'Alex',
-            reviewAuthorCity: 'Los Angeles, CA'
-        
-        },
-        {
             reviewText: `I can't say enough good things about this platform! I've rented vans multiple times for various trips, and each time 
             has been a positive experience. The vans are always in excellent condition.`,
             reviewAuthorImg: ReviewImg5,
@@ -95,6 +59,23 @@ export default function Home() {
             reviewAuthorCity: 'Phoenix, AZ'
         
         },
+        // {
+        //     reviewText: `I rented a van from this platform for a weekend getaway, and I couldn't be happier with my experience! 
+        //     The van was clean, comfortable, and equipped with everything I needed for my trip.`,
+        //     reviewAuthorImg: ReviewImg1,
+        //     reviewAuthorName: 'Samantha',
+        //     reviewAuthorCity: 'Chicago, IL'
+        
+        // },
+        // {
+        //     reviewText: `Five stars all around! I recently used this platform to rent a van for a camping trip with my family, and it was
+        //      a breeze from start to finish. The website is user-friendly, making it super easy.`,
+        //     reviewAuthorImg: ReviewImg4,
+        //     reviewAuthorName: 'Alex',
+        //     reviewAuthorCity: 'Los Angeles, CA'
+        
+        // },
+        
 
     ]
 
@@ -186,10 +167,21 @@ export default function Home() {
 
             <div className="home-section home-section-last">
                 <h2 className="home-page-review-heading">Our Client Reviews</h2>
-                {/* {reviewCards} */}
+                <div className="reviews-container">
+                    {reviewCards}
+                </div>
+                
                 {/* Carousel */}
 
-                <Carousel 
+                
+            </div>
+        </>
+     
+    )
+};
+
+/*
+<Carousel 
                     className="carousel" 
                     responsive={responsive}
                     swipeable={true}
@@ -199,8 +191,4 @@ export default function Home() {
                     >
                     {reviewCards}
                 </Carousel>
-            </div>
-        </>
-     
-    )
-};
+*/

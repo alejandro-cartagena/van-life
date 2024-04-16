@@ -453,13 +453,20 @@ footer {
     text-align: center;
 }
 
+.reviews-container {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+}
+
 .review-card {
     border-radius: 6px;
     /* max-width: 350px; */
     /* width: 100%; */
     padding: 2em 2.5em;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-right: 2em;
+    /* margin-right: 2em; */
 }
 
 .review-stars {
@@ -503,6 +510,8 @@ footer {
     /* border: solid red; */
     padding: 1em;
 }
+
+
 
 .home-section-last {
     margin-bottom: 5em;
