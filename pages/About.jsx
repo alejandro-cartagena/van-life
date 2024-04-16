@@ -1,6 +1,6 @@
 import React from "react"
 import bgImg from "../assets/images/about-hero.png"
-import VanRelax from "../assets/images/van-relax.jpg"
+import VanRelax from "../assets/images/van-relax-min.jpg"
 import { Link } from "react-router-dom"
 
 export default function About() {
