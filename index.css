@@ -383,6 +383,10 @@ footer {
     color: #444343;
 }
 
+.back-button-host-van-detail {
+    margin-left: 26px
+}
+
 .money-icon {
     background-color: green;
     color: #FFFFFF;

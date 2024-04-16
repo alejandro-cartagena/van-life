@@ -43,7 +43,7 @@ export default function HostVanDetail() {
             <Link
                 to=".."
                 relative="path"
-                className="back-button"
+                className="back-button back-button-host-van-detail"
             >&larr; <span>Back to all vans</span></Link>
             {currentVan &&
                 <div className="host-van-detail-layout-container">
