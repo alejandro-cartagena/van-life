@@ -12,10 +12,10 @@ import HostVansSc from '../assets/images/host-vans-sc.png'
 import HostReviewsSc from '../assets/images/host-reviews-sc.png'
 
 // Review Images
-import ReviewImg1 from '../assets/images/review-pic-1.jpg'
+// import ReviewImg1 from '../assets/images/review-pic-1.jpg'
 import ReviewImg2 from '../assets/images/review-pic-2.jpg'
 import ReviewImg3 from '../assets/images/review-pic-3.jpg'
-import ReviewImg4 from '../assets/images/review-pic-4.jpg'
+// import ReviewImg4 from '../assets/images/review-pic-4.jpg'
 import ReviewImg5 from '../assets/images/review-pic-5.jpg'
 
 
