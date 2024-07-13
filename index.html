@@ -1,11 +1,26 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="/index.css">
-    </head>
-    <body>
-        <div id="root"></div>
-        <script src="/index.jsx" type="module"></script>
-    </body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Van Life</title>
+    <style>
+      .home-container {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.46),
+            rgba(0, 0, 0, 0.46)
+          ),
+          url("/images/home-page-bg-img-min-min-min.jpg") no-repeat center
+            center;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/src/index.jsx" type="module"></script>
+  </body>
 </html>
